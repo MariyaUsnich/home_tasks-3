@@ -4,27 +4,21 @@ public class MainCycles {
 
     public static void main(String[] arg) {
         firstTask();
-//        secondTask();
-//        thirdTask();
+        secondTask();
+        thirdTask();
+        fourthTask();
     }
 
     private static void firstTask() {
-//        String str = new String();
         Scanner scanner = new Scanner(System.in);
-//        while (str.length() == 0) {
-//
-//            str = scanner.nextLine();
-//        }
         while (true) {
             System.out.print("Please enter something");
-//            System.out.println(str);
             String str = scanner.nextLine();
             if (str.equalsIgnoreCase("Exit")) {
                 break;
             }
         }
     }
-
     private static void secondTask() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number: ");
@@ -61,23 +55,32 @@ public class MainCycles {
             }
 
         }
-
-
-//        System.out.print("Please enter your score: ");
-//        int score = new Scanner(System.in).nextInt();
-//        if (score >= 70 && score <= 100) {
-//            System.out.println("Congrats! You’ve passed the test!");
-//        } else if (score >= 0 && score < 70) {
-//            System.out.println("Sorry, you’ve failed the test.");
-//        } else {
-//            do {
-//                System.out.println("Sorry, the score is incorrect. Please enter your score: ");
-//                score = new Scanner(System.in).nextInt();
-//            }
-//            while (score <= 0 && score >= 100);
-//        }
     }
-}
+      private static void fourthTask() {
+            String[] channels = new String[5];
+
+            channels[0] = "Discovery";
+            channels[1] = "ONT";
+            channels[2] = "TNT";
+            channels[3] = "National Geographic";
+            channels[4] = "History";
+
+            while (true) {
+                System.out.println("Input channel number:");
+                int channelNumber = new Scanner(System.in).nextInt();
+                if (channelNumber == 0) {
+                    break;
+                } else if (channelNumber > 0 && channelNumber <= 5) {
+                    System.out.println(channels[channelNumber - 1]);
+                }
+                else {
+                    System.out.println("Channel is unavailable");
+                }
+            }
+        }
+
+     }
+
 
 
 
