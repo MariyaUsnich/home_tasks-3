@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class MainCycles {
 
     public static void main(String[] arg) {
-//        firstTask();
+        firstTask();
 //        secondTask();
-        thirdTask();
+//        thirdTask();
     }
 
     private static void firstTask() {
